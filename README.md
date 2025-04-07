@@ -39,7 +39,7 @@ The core idea was to rebuild the functionality, parsing, and reshaping logic fro
 
 ---
 
-##⚙️ Design Decisions
+## ⚙️ Design Decisions
 
 - 🚀 **One-pass parser for patterns** – fast and less annoying
 - 🧠 **Inference engine that auto-fills unknown dims** - like a mind-reader
@@ -48,8 +48,8 @@ The core idea was to rebuild the functionality, parsing, and reshaping logic fro
 
 ---
 
-##🧪 How to Run
-###🧬 Basic Usage
+## 🧪 How to Run
+### 🧬 Basic Usage
 ```python
 import numpy as np
 from rearrange import rearrange
@@ -66,7 +66,7 @@ result = rearrange(x, "(a b) c -> a (b c)", a=2, b=3)
 print(result.shape)  # (2, 12)
 ```
 
-🧪 Running Tests
+### 🧪 Running Tests
 ```python
 import unittest
 
@@ -79,13 +79,13 @@ unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromTestCase(TestRe
 
 ---
 
-##⚡ Performance Vibes
+## ⚡ Performance Vibes
 - Built with NumPy for 🔥 speed
 - Pattern parsing optimized in a single-pass
 - Efficient dimension inference without slowing you down
 - Clean error handling with zero BS
 
-##📉 Benchmark Report:
+## 📉 Benchmark Report:
 I ran performance comparisons between einflux and the original einops library across various tensor sizes and rearrangement patterns.
 
 On average, einflux is ~2.51x slower than einops.
@@ -96,7 +96,7 @@ This performance difference is expected due to the additional parsing logic and 
 
 ---
 
-##🧵 Edge Cases? We Handle Those Too
+## 🧵 Edge Cases? We Handle Those Too
 - ✅ Repeated dimensions in output like a b -> a b a
 - ✅ Mixing numbers and names (a 2) b -> b (2 a)
 - ✅ Wildcards and ellipses like a champ
@@ -104,7 +104,7 @@ This performance difference is expected due to the additional parsing logic and 
 
 ---
 
-##📦 Installation
+## 📦 Installation
 Not on PyPI yet. Just clone this:
 
 ```bash
@@ -114,10 +114,10 @@ cd einflux
 
 ---
 
-##😎 License
+## 😎 License
 MIT – steal it, modify it, launch it into production, just don’t blame me when your tensors ascend to a higher dimension.
 
 ---
 
-##💬 Contributing
+## 💬 Contributing
 Got ideas? Bugs? Cool pattern syntax? Open a PR or start an issue. Tensor wizards welcom
