@@ -52,7 +52,7 @@ The core idea was to rebuild the functionality, parsing, and reshaping logic fro
 ### 🧬 Basic Usage
 ```python
 import numpy as np
-from rearrange import rearrange
+from einflux import rearrange
 
 x = np.zeros((2, 3, 4))
 
@@ -67,14 +67,15 @@ print(result.shape)  # (2, 12)
 ```
 
 ### 🧪 Running Tests
+Make sure pyytest is installed.
+```bash
+pip install pytest
+```
+
 ```python
-import unittest
+import pytest
 
-# Run all tests
-unittest.main(argv=['first-arg-is-ignored'], exit=False)
-
-# Or run a specific test class
-unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromTestCase(TestRearrange))
+pytest tests.py -v
 ```
 
 ---
