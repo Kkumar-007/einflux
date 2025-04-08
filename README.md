@@ -92,7 +92,7 @@ On average, einflux is ~2.51x slower than einops.
 
 This performance difference is expected due to the additional parsing logic and lack of low-level optimization in the current prototype. Future versions aim to narrow this gap while maintaining readability and flexibility.
 
-📝 The full performance report is included in the repo: performance_report.md
+📝 The full performance report is included in performance_report.md
 
 ---
 
