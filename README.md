@@ -7,7 +7,7 @@
 
 ---
 
-## 🚀 Mission
+## Aim
 
 I tried to **re-implement `einops` from scratch**, and... mission accomplished!  
 The core idea was to rebuild the functionality, parsing, and reshaping logic from the ground up using just **NumPy**.
@@ -16,18 +16,18 @@ The core idea was to rebuild the functionality, parsing, and reshaping logic fro
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔁 **Pattern-based dimension sorcery** – Write rearrange logic as readable strings like `"a b c -> c a b"`
-- 🧩 **Split & merge dimensions** – Do `(a b) c -> a (b c)` like it's nothing
-- 🎭 **Wildcard & ellipsis support** – Use `*` or `...` to match variable dims
-- 🔍 **Smart dimension inference** – Forget hardcoding sizes, we gotchu
-- ⚡ **Fast & memory-friendly** – Powered by NumPy’s vectorized magic
-- 🧼 **Solid error handling** – Clear feedback when patterns go 💥
+- **Pattern-based dimension sorcery** – Write rearrange logic as readable strings like `"a b c -> c a b"`
+- **Split & merge dimensions** – Do `(a b) c -> a (b c)` like it's nothing
+- **Wildcard & ellipsis support** – Use `*` or `...` to match variable dims
+- **Smart dimension inference** – Forget hardcoding sizes
+- **Fast & memory-friendly** – Powered by NumPy’s vectorized magic
+- **Solid error handling** – Clear feedback when patterns fail
 
 ---
 
-## 🧠 Pattern Syntax Cheat Sheet
+## Pattern Syntax Cheat Sheet
 
 ```python
 "a b c -> c a b"       # Transpose
@@ -39,17 +39,17 @@ The core idea was to rebuild the functionality, parsing, and reshaping logic fro
 
 ---
 
-## ⚙️ Design Decisions
+## Design Decisions
 
-- 🚀 **One-pass parser for patterns** – fast and less annoying
-- 🧠 **Inference engine that auto-fills unknown dims** - like a mind-reader
-- 🧽 **Memory efficient reshapes/transposes** – no unnecessary copies
-- 💥 **Errors that make sense** – so you don’t cry when things break
+- **One-pass parser for patterns** – fast and less annoying
+- **Inference engine that auto-fills unknown dims** - like a mind-reader
+- **Memory efficient reshapes/transposes** – no unnecessary copies
+- **Errors that make sense** – to provide efficient feedback
 
 ---
 
-## 🧪 How to Run
-### 🧬 Basic Usage
+## How to Run
+### Basic Usage
 ```python
 import numpy as np
 from einflux import rearrange
@@ -66,7 +66,7 @@ result = rearrange(x, "(a b) c -> a (b c)", a=2, b=3)
 print(result.shape)  # (2, 12)
 ```
 
-### 🧪 Running Tests
+### Running Tests
 Make sure pyytest is installed.
 ```bash
 pip install pytest
@@ -80,13 +80,13 @@ pytest tests.py -v
 
 ---
 
-## ⚡ Performance Vibes
-- Built with NumPy for 🔥 speed
+## Performance Vibes
+- Built with NumPy for speed
 - Pattern parsing optimized in a single-pass
 - Efficient dimension inference without slowing you down
-- Clean error handling with zero BS
+- Clean error handling
 
-## 📉 Benchmark Report:
+## Benchmark Report:
 I ran performance comparisons between einflux and the original einops library across various tensor sizes and rearrangement patterns.
 
 On average, einflux is ~2.51x slower than einops.
@@ -97,7 +97,7 @@ This performance difference is expected due to the additional parsing logic and 
 
 ---
 
-## 🧵 Edge Cases? We Handle Those Too
+## Edge Cases? We Handle Those Too
 - ✅ Repeated dimensions in output like a b -> a b a
 - ✅ Mixing numbers and names (a 2) b -> b (2 a)
 - ✅ Wildcards and ellipses like a champ
@@ -112,11 +112,6 @@ Not on PyPI yet. Just clone this:
 git clone https://github.com/Kkumar-007/einflux.git
 cd einflux
 ```
-
----
-
-## 😎 License
-MIT – steal it, modify it, launch it into production, just don’t blame me when your tensors ascend to a higher dimension.
 
 ---
 
