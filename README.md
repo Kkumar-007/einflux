@@ -89,7 +89,7 @@ pytest tests.py -v
 ## Benchmark Report:
 I ran performance comparisons between einflux and the original einops library across various tensor sizes and rearrangement patterns.
 
-On average, einflux is ~2.51x slower than einops.
+On average, einflux is ~2.42x slower than einops.
 
 This performance difference is expected due to the additional parsing logic and lack of low-level optimization in the current prototype. Future versions aim to narrow this gap while maintaining readability and flexibility.
 
