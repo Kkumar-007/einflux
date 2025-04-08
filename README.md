@@ -12,7 +12,7 @@
 I tried to **re-implement `einops` from scratch**, and... mission accomplished!  
 The core idea was to rebuild the functionality, parsing, and reshaping logic from the ground up using just **NumPy**.
 
-> While this version works great and supports a wide range of rearrangement patterns, benchmarks show that it's currently **~2.51x slower** than the original `einops` library. Totally expected for a first version – and hey, it's readable!
+> While this version works great and supports a wide range of rearrangement patterns, benchmarks show that it's currently **~2.42x slower** than the original `einops` library. Totally expected for a first version – and hey, it's readable!
 
 ---
 
